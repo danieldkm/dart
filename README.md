@@ -22,3 +22,7 @@ dart create -t console-full dart_fundamentos
 - View -> Command Palette -> Dart: Create
 
 ### Variáveis
+
+### Imutabilidade
+
+Sempre que possível utilizar o ```final```
