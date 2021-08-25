@@ -16,6 +16,9 @@ Ferramenta web de linha de comando
 **Criar projeto por linha de Comando**
 ```bash
 dart create -t console-full dart_fundamentos
+
+# setar o nullsafety
+dart pub upgrade --null-safety
 ```
 
 **Criar projeto por VS Code**
@@ -26,3 +29,4 @@ dart create -t console-full dart_fundamentos
 ### Imutabilidade
 
 Sempre que possível utilizar o ```final```
+
