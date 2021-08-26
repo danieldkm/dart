@@ -43,3 +43,10 @@ dart pub upgrade --null-safety
 
 Sempre que possível utilizar o ```final```
 
+
+## Módulo 4 - Dart Funções e Coleções
+
+**Criar projeto por linha de Comando**
+```bash
+dart create -t console-full dart_funcoes_colecoes
+```
