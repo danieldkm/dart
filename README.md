@@ -58,3 +58,17 @@ dart create -t console-full dart_funcoes_colecoes
   var numerosLista = <int?>[];
   print(numerosLista.toSet());
 ```
+
+## Módulo 5 - Dart POO( Programação Orientada a Objeto)
+
+### Fundamentos
+**Abstração**: 
+- Assim como no nosso cotidiano nos abstraímos de certas dificuldades para atingirmos nossas metas, na programação orientada a objetos não poderia ser diferente. Afinal, programamos para automatizar processos do nosso dia a dia.
+
+- **Abstração quer dizer**: "Processo pelo qual se isolam características, considerando os que tenham em comum certos grupos de objetos"
+
+- A ideia que essa definição transmite é que não devemos nos preocupar com características menos importantes, ou seja, acidentais. Devemos, neste caso nos concentrar apenas nos aspectos essencias.
+
+- Não existe pior prática em programação do que a repetição de código. Isto leva a um código frágil, propício a resultados inesperados. Quanto mais código são repetidos pela aplicação, mais difícil vai se tornando sua manutenção. Isso porque facilmente se pode esquecer de atualizar algum ponto que logo levará a uma inconsistência.
+
+<img src="assets/abstracao.png" center />
