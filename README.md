@@ -50,3 +50,11 @@ Sempre que possível utilizar o ```final```
 ```bash
 dart create -t console-full dart_funcoes_colecoes
 ```
+
+### Sets
+- Não deixa adicionar valores duplicados
+```dart
+  // Convertendo uma lista em sets com .toSet()
+  var numerosLista = <int?>[];
+  print(numerosLista.toSet());
+```
