@@ -62,6 +62,7 @@ dart create -t console-full dart_funcoes_colecoes
 ## Módulo 5 - Dart POO( Programação Orientada a Objeto)
 
 ### Fundamentos
+---
 **Abstração**: 
 - Assim como no nosso cotidiano nos abstraímos de certas dificuldades para atingirmos nossas metas, na programação orientada a objetos não poderia ser diferente. Afinal, programamos para automatizar processos do nosso dia a dia.
 
@@ -71,4 +72,31 @@ dart create -t console-full dart_funcoes_colecoes
 
 - Não existe pior prática em programação do que a repetição de código. Isto leva a um código frágil, propício a resultados inesperados. Quanto mais código são repetidos pela aplicação, mais difícil vai se tornando sua manutenção. Isso porque facilmente se pode esquecer de atualizar algum ponto que logo levará a uma inconsistência.
 
-<img src="assets/abstracao.png" center />
+<img src="assets/abstracao.png" />
+
+---
+
+**Encapsulamento**: 
+
+- complexo:
+
+    Uma analogia, com o mundo real. Quando alguém se consulta com um médico, por estar com um resfriado, seria desesperador se ao final da consulta o médico entregasse a seguinte receita:
+
+<img src="assets/encapsulamento1.png" />
+
+- simples:
+
+    Mais simples do que isso é o que os médicos realmente fazem: passam uma cápsula onde todas estas substáncias já estão prontas. Ou seja, elas já vêm **encapsuladas**.
+
+    Com isso, não será preciso se preocupar em saber quanto e como as substâncias devem ser manupuladas para no final termos o comprimido que resolverá o problema.
+
+    O que interessa é o resultado final, no caso, a cura do resfriado. A complexidade de chegar a essas medidas e como misturá-las não interessa. É um processo que não precisa ser do conhecimento do paciente.
+
+<img src="assets/encapsulamento2.png" />
+
+- Essa mesma ideia se aplaca na Orientação a Objetos. No caso, a complexidade que desejamos esconder é a de implementação de alguma necessidade. Com o encapsilamento, podemos esconder a forma como algo foi feito, dando a quem precisa apenas o resultado gerado.
+
+- Uma vantagem é que as mudanças se tornam transparente, ou seja, quem usa algum processamento não será afetado quando seu comportamento interno mudar
+
+- Uma outra característica do encapsulamento é também a ocultação da informação.
+  - ou seja ele não precisa saber como ta fazendo, mas que existe aquela função que faz algo.
