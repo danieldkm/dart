@@ -116,3 +116,6 @@ dart create -t console-full dart_funcoes_colecoes
 - heranca covariant: Pode alterar o tipo da variavel, se a classe for filho da classe pai declarada no metodo.
 
 **Associação (Composição e Agregação)**:
+
+**Polimorfismo**:
+- Alterar a caracteristica de uma classe.
