@@ -94,9 +94,16 @@ dart create -t console-full dart_funcoes_colecoes
 
 <img src="assets/encapsulamento2.png" />
 
-- Essa mesma ideia se aplaca na Orientação a Objetos. No caso, a complexidade que desejamos esconder é a de implementação de alguma necessidade. Com o encapsilamento, podemos esconder a forma como algo foi feito, dando a quem precisa apenas o resultado gerado.
+- Essa mesma ideia se aplaca na Orientação a Objetos. No caso, a complexidade que desejamos esconder é a de implementação de alguma necessidade. Com o encapsulamento, podemos esconder a forma como algo foi feito, dando a quem precisa apenas o resultado gerado.
 
 - Uma vantagem é que as mudanças se tornam transparente, ou seja, quem usa algum processamento não será afetado quando seu comportamento interno mudar
 
 - Uma outra característica do encapsulamento é também a ocultação da informação.
   - ou seja ele não precisa saber como ta fazendo, mas que existe aquela função que faz algo.
+
+**Classes**:
+
+- Representação do mundo real.
+- Aluno, paciente, Produto, etc
+- Coisas do mundo real
+- atributes e comportamentos
