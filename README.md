@@ -107,3 +107,11 @@ dart create -t console-full dart_funcoes_colecoes
 - Aluno, paciente, Produto, etc
 - Coisas do mundo real
 - atributes e comportamentos
+- o corpo do construtor é chamado dps de ja ter instanciado a classe
+
+- late - sera iniciado dps
+  - tomar cuidade com o late e o ! (Force non null)
+
+**Herança**:
+
+
