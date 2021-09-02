@@ -113,5 +113,6 @@ dart create -t console-full dart_funcoes_colecoes
   - tomar cuidade com o late e o ! (Force non null)
 
 **Herança**:
+- heranca covariant: Pode alterar o tipo da variavel, se a classe for filho da classe pai declarada no metodo.
 
-
+**Associação (Composição e Agregação)**:
