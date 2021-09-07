@@ -165,3 +165,5 @@ Chama automaticamente metodos com nome call.
 **Operator Methods**:
 
 No dart todos os operados são implementados.
+
+**Assignment operators**:
