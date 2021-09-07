@@ -173,3 +173,9 @@ No dart todos os operados são implementados.
 Sempre que sobscrever o == (*Equals*), todos os campos que envolver a igualdade, deve sobscrever o hashcode, porque existe algumas coleções que utiliza o hashcode para comparações.
 
 **Ordenação default (Comparable)**:
+
+**Asserts**:
+
+por default o asserts esta desabilitado no dart, mas é possivel executar com a opção para habilitar.
+
+`dart --enable-asserts .\1_asserts.dart`
