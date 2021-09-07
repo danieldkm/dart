@@ -154,3 +154,5 @@ Segue algumas caracteristicas:
 3. não é possivel exterder um mixin
 4. Se existir algum metodo com a mesma assinatura, irá sobrescrever ela, quem estiver por ultimo, ex:
 `class Teste extends Artista with Dancar, Cantar`, a classe cantar ira sobrescrever metodos com a mesma assinatura.
+
+**Cascade Notation**:
