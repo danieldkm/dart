@@ -156,3 +156,8 @@ Segue algumas caracteristicas:
 `class Teste extends Artista with Dancar, Cantar`, a classe cantar ira sobrescrever metodos com a mesma assinatura.
 
 **Cascade Notation**:
+
+**Callable Class**:
+
+Chama automaticamente metodos com nome call.
+`String call(String teste){}`
