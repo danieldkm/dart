@@ -179,3 +179,8 @@ Sempre que sobscrever o == (*Equals*), todos os campos que envolver a igualdade,
 por default o asserts esta desabilitado no dart, mas é possivel executar com a opção para habilitar.
 
 `dart --enable-asserts .\1_asserts.dart`
+
+**Modificador Const (Construtor)**:
+
+Quando utiliza se o const, o dart valida se existe as mesmas configurações de outra instancia com const e aponta para a mesma referencia de memoria.
+
