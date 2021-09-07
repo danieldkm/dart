@@ -133,3 +133,4 @@ dart create -t console-full dart_funcoes_colecoes
 - Alterar a caracteristica de uma classe.
 
 **Interfaces**:
+**Auto Promoção de Tipos**:
