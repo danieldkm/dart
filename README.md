@@ -171,3 +171,5 @@ No dart todos os operados são implementados.
 **Equals, Hashcode e ToString**:
 
 Sempre que sobscrever o == (*Equals*), todos os campos que envolver a igualdade, deve sobscrever o hashcode, porque existe algumas coleções que utiliza o hashcode para comparações.
+
+**Ordenação default (Comparable)**:
