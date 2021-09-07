@@ -176,15 +176,22 @@ Sempre que sobscrever o == (*Equals*), todos os campos que envolver a igualdade,
 
 **Asserts**:
 
-por default o asserts esta desabilitado no dart, mas é possivel executar com a opção para habilitar.
+por default o `asserts` esta desabilitado no dart, mas é possivel executar com a opção para habilitar.
 
 `dart --enable-asserts .\1_asserts.dart`
 
 **Modificador Const (Construtor)**:
 
-Quando utiliza se o const, o dart valida se existe as mesmas configurações de outra instancia com const e aponta para a mesma referencia de memoria.
+Quando utiliza se o `const`, o dart valida se existe as mesmas configurações de outra instancia com `const` e aponta para a mesma referencia de memoria.
 
 **Extensions**:
 
 Capacidade que eu tenho de adicionar função dentro da classe que não tenho o código fonte.
+
+**Metadatas (Annotations)**:
+
+@ Anotações
+
+- Para utilizar uma classe como uma `annotations`, o construtor deve ser um `const`
+- 
 
