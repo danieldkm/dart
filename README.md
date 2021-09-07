@@ -184,3 +184,7 @@ por default o asserts esta desabilitado no dart, mas é possivel executar com a 
 
 Quando utiliza se o const, o dart valida se existe as mesmas configurações de outra instancia com const e aponta para a mesma referencia de memoria.
 
+**Extensions**:
+
+Capacidade que eu tenho de adicionar função dentro da classe que não tenho o código fonte.
+
