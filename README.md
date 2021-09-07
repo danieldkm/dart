@@ -161,3 +161,7 @@ Segue algumas caracteristicas:
 
 Chama automaticamente metodos com nome call.
 `String call(String teste){}`
+
+**Operator Methods**:
+
+No dart todos os operados são implementados.
