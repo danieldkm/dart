@@ -4,3 +4,5 @@
 
 ## Futures
 ## Async Await
+
+## Future.forEach e Future.wait
