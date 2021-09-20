@@ -60,3 +60,9 @@ Exemplo de um Serviço RestFul.
 
 ---
 
+## Adicionando códigos de terceiro ao nosso projeto
+
+[Packages](https://pub.dev)
+- http
+
+## Trabalhando com Http
