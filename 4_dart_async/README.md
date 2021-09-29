@@ -67,3 +67,4 @@ Exemplo de um Serviço RestFul.
 
 ## Trabalhando com Http
 ## Trabalhando com modelos
+## Repository Pattern
