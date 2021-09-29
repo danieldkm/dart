@@ -68,3 +68,8 @@ Exemplo de um Serviço RestFul.
 ## Trabalhando com Http
 ## Trabalhando com modelos
 ## Repository Pattern
+## Trabalhando com Arquivos
+- Leitura Sincrona
+- Leitura Assincrona
+- Leitura linha sincrona
+- Leitura linha assincrona
