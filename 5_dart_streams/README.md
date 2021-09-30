@@ -18,3 +18,10 @@ Mas qual a diferença, se stream também é um futuro?
 Resumindo no _future_ você irá receber um unico valor, ja na _stream_ permanece aberto, podendo encadear varios futures e pode ser fechado quando quiser.
 
 ## Stream.periodic e await for
+## Parando uma Stream com Take e TakeWhile
+Transformação
+
+### Take
+limita quantas vezes a stream vai receber algo.
+### TakeWhile
+Executa enquanto a condição é verdadeira.
