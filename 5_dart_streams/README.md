@@ -28,3 +28,4 @@ Executa enquanto a condição é verdadeira.
 
 ## Descartando dados com Skip e SkipWhile
 ## .toList recebendo todos os dados de uma vez só
+## Escutando nossa stream com Listener
