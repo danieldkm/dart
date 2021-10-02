@@ -30,9 +30,11 @@ Executa enquanto a condição é verdadeira.
 ## .toList recebendo todos os dados de uma vez só
 ## Escutando nossa stream com Listener
 ## Filtrando dados com Where
-# Vários ouvintes na stream com .asBroadcast
+## Vários ouvintes na stream com .asBroadcast
 - so pode ter apenas um `listen`
 - mas podemos dividir, ou seja mais de uma pessoa ouvindo essa `stream`, com o broadcast
 - permitindo assim vários subscribers
 - a stream continuar ativa enquando não solicitar o encerramento.
+
+## StreamController
 
