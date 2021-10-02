@@ -25,3 +25,6 @@ Transformação
 limita quantas vezes a stream vai receber algo.
 ### TakeWhile
 Executa enquanto a condição é verdadeira.
+
+## Descartando dados com Skip e SkipWhile
+## .toList recebendo todos os dados de uma vez só
