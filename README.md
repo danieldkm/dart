@@ -14,9 +14,3 @@
 - Flutter & Dart Utilities -> Feito pelo prof.
 - IntelliJ IDEA Keybindings
 
-
-## Comandos
-```bash
-# subindo mysql
-docker-compose -f docker-compose.mysql.yml up
-```
