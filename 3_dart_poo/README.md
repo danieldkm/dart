@@ -134,3 +134,11 @@ Capacidade que eu tenho de adicionar função dentro da classe que não tenho o 
 - quando não tem regras de pegar ou atualizar os dados não faz sentido ter get e/ou set.
 - caso haja regras de negocio para atribuir, basta utilizar essas nomenclaturas (get e set) que o resto do código continua funcionando normalmente.
   - no java por exemplo, utilizamos a nomenclatura setNome ou getNome, essas definições no dart quebra as atribuições do tipo `nome = 'teste'`
+
+## Constructors Tear-off
+
+- passar funções como parâmetro
+
+## Tipos genericos
+
+- passar tipo para uma classe
