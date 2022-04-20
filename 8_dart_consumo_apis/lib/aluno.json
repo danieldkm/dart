@@ -1,0 +1,28 @@
+{
+  "nome": "Daniel K. Morita",
+  "idade": 35,
+  "nomeCursos": [
+    "Academia do flutter", "Imersão GetX"
+  ],
+  "cursos": [
+    {
+      "id": 1,
+      "nome": "Academia do flutter",
+      "isAluno": true
+    },
+    {
+      "id": 2,
+      "nome": "Imersão GetX",
+      "isAluno": false
+    }
+  ],
+  "telefone": {
+    "ddd": 11,
+    "telefone": "999999999"
+  },
+  "endereco": {
+    "rua": "Rua X",
+    "numero": 200,
+    "CEP": "86200000"
+  }
+}

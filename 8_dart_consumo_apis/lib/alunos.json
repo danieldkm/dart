@@ -1,0 +1,23 @@
+[
+  {
+    "nome": "Daniel K. Morita",
+    "idade": 35,
+    "nomeCursos": [
+      "Academia do flutter", "Imersão GetX"
+    ]
+  },
+  {
+    "nome": "Jose da Silva",
+    "idade": 36,
+    "nomeCursos": [
+      "Academia do flutter", "Imersão GetX"
+    ]
+  },
+  {
+    "nome": "Joao de Dados",
+    "idade": 37,
+    "nomeCursos": [
+      "Academia do flutter", "Imersão GetX"
+    ]
+  }
+]
