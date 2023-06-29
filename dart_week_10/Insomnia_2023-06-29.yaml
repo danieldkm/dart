@@ -1,0 +1,749 @@
+_type: export
+__export_format: 4
+__export_date: 2023-06-29T09:53:50.315Z
+__export_source: insomnia.desktop.app:v2023.2.2
+resources:
+  - _id: req_2f1864806feb41c788c55dff627d8376
+    parentId: fld_3ee3fe2e85d340688a6a1c5cb0b097e0
+    modified: 1684923683258
+    created: 1684923634558
+    url: "{{ _.base__url }}/users"
+    name: Register
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+            "name": "Daniel Morita",
+            "email": "danielmorita@hotmail.com",
+            "password": "123"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication: {}
+    metaSortKey: -1684923634558
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_3ee3fe2e85d340688a6a1c5cb0b097e0
+    parentId: wrk_c9c55eedf76d4ba59cee836694fc9dd5
+    modified: 1684923634549
+    created: 1684923634549
+    name: Auth
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1684923634549
+    _type: request_group
+  - _id: wrk_c9c55eedf76d4ba59cee836694fc9dd5
+    parentId: null
+    modified: 1683804882013
+    created: 1683804882013
+    name: dart week 10
+    description: ""
+    scope: collection
+    _type: workspace
+  - _id: req_1e237452956646e3931df9274c24b466
+    parentId: fld_3ee3fe2e85d340688a6a1c5cb0b097e0
+    modified: 1684923792558
+    created: 1684923634556
+    url: "{{ _.base__url }}/me"
+    name: me
+    description: ""
+    method: GET
+    body:
+      mimeType: application/json
+      text: |-
+        {
+            "email": "danielmorita@hotmail.com",
+            "password": "1232"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication:
+      type: bearer
+      disabled: false
+      token: "{% response 'body', 'req_20b6ee6edf114271a8ff394c79c45673',
+        'b64::JC5hY2Nlc3NfdG9rZW4=::46b', 'never', 60 %}"
+      prefix: ""
+    metaSortKey: -1684923634556
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_1876f6e71d27440fb69f6f3062bc5df6
+    parentId: fld_3ee3fe2e85d340688a6a1c5cb0b097e0
+    modified: 1684923852675
+    created: 1684923634555
+    url: "{{ _.base__url }}/auth/refresh"
+    name: Refresh_token
+    description: ""
+    method: PUT
+    body:
+      mimeType: application/json
+      text: >-
+        {
+            "refresh_token": "{% response 'body', 'req_20b6ee6edf114271a8ff394c79c45673', 'b64::JC5yZWZyZXNoX3Rva2Vu::46b', 'never', 60 %}"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication:
+      type: bearer
+      disabled: false
+      token: "{% response 'body', 'req_20b6ee6edf114271a8ff394c79c45673',
+        'b64::JC5hY2Nlc3NfdG9rZW4=::46b', 'never', 60 %}"
+      prefix: ""
+    metaSortKey: -1684923634555
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_c5bc56eb1111461490e486bb42c88e0b
+    parentId: fld_3ee3fe2e85d340688a6a1c5cb0b097e0
+    modified: 1684923755099
+    created: 1684923634554
+    url: "{{ _.base__url }}/auth"
+    name: Login adm
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"email": "danielmorita@hotmail.com",
+        	"password": "123123",
+        	"admin": true
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication: {}
+    metaSortKey: -1684923634554
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_20b6ee6edf114271a8ff394c79c45673
+    parentId: fld_3ee3fe2e85d340688a6a1c5cb0b097e0
+    modified: 1684923731457
+    created: 1684923634553
+    url: "{{ _.base__url }}/auth"
+    name: Login
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"email": "danielmorita@hotmail.com",
+        	"password": "123123",
+        	"admin": false
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication: {}
+    metaSortKey: -1684923634553
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_78ebcb4070f04b4eb99e73d7a40c4939
+    parentId: fld_0426f99351c84eb6ae78720739f5a93a
+    modified: 1684923974361
+    created: 1684923624741
+    url: "{{ _.base__url }}/orders/3"
+    name: Order Edit
+    description: ""
+    method: PUT
+    body:
+      mimeType: application/json
+      text: "{\r\n    \"status\": \"P\"\r\n}"
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication:
+      type: bearer
+      disabled: false
+      token: "{% response 'body', 'req_20b6ee6edf114271a8ff394c79c45673',
+        'b64::JC5hY2Nlc3NfdG9rZW4=::46b', 'never', 60 %}"
+      prefix: ""
+    metaSortKey: -1684923624741
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_0426f99351c84eb6ae78720739f5a93a
+    parentId: wrk_c9c55eedf76d4ba59cee836694fc9dd5
+    modified: 1684923624733
+    created: 1684923624733
+    name: Order
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1684923624733
+    _type: request_group
+  - _id: req_aebe6bf07dd04a00b4fff73b2ea8cd0b
+    parentId: fld_0426f99351c84eb6ae78720739f5a93a
+    modified: 1684923975993
+    created: 1684923624740
+    url: "{{ _.base__url }}/orders"
+    name: Orders data
+    description: ""
+    method: GET
+    body:
+      mimeType: application/json
+      text: "{\r
+
+        \    \"name\": \"Porção de 500g Calabresa acebolada\",\r
+
+        \    \"description\": \"\",\r
+
+        \    \"price\": 19.0,\r
+
+        \    \"image_path\":
+        \"https://www.anamariabrogui.com.br/assets/uploads/receitas/fotos/usuar\
+        io-1682-52acab79d88efd805e6a341697e6aecb.jpg\"\r
+
+        }"
+    parameters:
+      - name: date
+        value: 2023-04-25T00%3A00%3A00.000
+        disabled: false
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication:
+      type: bearer
+      disabled: false
+      token: "{% response 'body', 'req_20b6ee6edf114271a8ff394c79c45673',
+        'b64::JC5hY2Nlc3NfdG9rZW4=::46b', 'never', 60 %}"
+      prefix: ""
+    metaSortKey: -1684923624740
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_9ba7d22602314ba3b3ae5846ed1940f1
+    parentId: fld_0426f99351c84eb6ae78720739f5a93a
+    modified: 1687257881315
+    created: 1684923624738
+    url: "{{ _.base__url }}/orders/8"
+    name: Order
+    description: ""
+    method: DELETE
+    body:
+      mimeType: application/json
+      text: "{\r
+
+        \    \"name\": \"Porção de 500g Calabresa acebolada\",\r
+
+        \    \"description\": \"\",\r
+
+        \    \"price\": 19.0,\r
+
+        \    \"image_path\":
+        \"https://www.anamariabrogui.com.br/assets/uploads/receitas/fotos/usuar\
+        io-1682-52acab79d88efd805e6a341697e6aecb.jpg\"\r
+
+        }"
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication:
+      type: bearer
+      disabled: false
+      token: "{% response 'body', 'req_20b6ee6edf114271a8ff394c79c45673',
+        'b64::JC5hY2Nlc3NfdG9rZW4=::46b', 'never', 60 %}"
+      prefix: ""
+    metaSortKey: -1684923624738
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_5f430d2f50f940d8bae0c06054535159
+    parentId: fld_0426f99351c84eb6ae78720739f5a93a
+    modified: 1687863022066
+    created: 1684923624737
+    url: "{{ _.base__url }}/orders"
+    name: Orders
+    description: ""
+    method: GET
+    body:
+      mimeType: application/json
+      text: >-
+        {
+            "name": "Porção de 500g Calabresa acebolada",
+            "description": "",
+            "price": 19.0,
+            "image_path": "https://www.anamariabrogui.com.br/assets/uploads/receitas/fotos/usuario-1682-52acab79d88efd805e6a341697e6aecb.jpg"
+        }
+    parameters:
+      - id: pair_ef555048f46d42ba87ea61a6a6bb01cc
+        name: date
+        value: 2023-06-27T00%3A00%3A00.000
+        description: ""
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication:
+      type: bearer
+      disabled: false
+      token: "{% response 'body', 'req_20b6ee6edf114271a8ff394c79c45673',
+        'b64::JC5hY2Nlc3NfdG9rZW4=::46b', 'never', 60 %}"
+      prefix: ""
+    metaSortKey: -1684923624737
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_d741da6e4339419aa947c11e52323cbc
+    parentId: fld_0426f99351c84eb6ae78720739f5a93a
+    modified: 1687862038277
+    created: 1684923624735
+    url: "{{ _.base__url }}/orders"
+    name: Order
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-2
+         {
+                "date": "2023-06-27T00:00:00.000",
+                "status": "P",
+                "products": [
+                    {
+                        "id": 1,
+                        "amount": 2,
+                        "total_price": 38.0
+                    },
+                    {
+                        "id": 2,
+                        "amount": 1,
+                        "total_price": 19.0
+                    }
+                ],
+                "user_id": 2,
+                "address": "Av Paulista, 51 São Paulo",
+                "CPF": 1234156464,
+                "payment_method_id": 1
+            }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication:
+      type: bearer
+      disabled: false
+      token: "{% response 'body', 'req_20b6ee6edf114271a8ff394c79c45673',
+        'b64::JC5hY2Nlc3NfdG9rZW4=::46b', 'never', 60 %}"
+      prefix: ""
+    metaSortKey: -1684923624735
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_f6cb3d4fd19441a7946a085ec928fa77
+    parentId: fld_59f965cb2b524e29a66e28eb956ac83f
+    modified: 1684923982841
+    created: 1684923598285
+    url: "{{ _.base__url }}/payment-types/1"
+    name: payment-types by id
+    description: ""
+    method: GET
+    body:
+      mimeType: application/json
+      text: "{\r
+
+        \    \"name\": \"Vale Alimentação\",\r
+
+        \    \"acronym\": \"VA\",\r
+
+        \    \"enabled\": true\r
+
+        }"
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication:
+      type: bearer
+      disabled: false
+      token: "{% response 'body', 'req_20b6ee6edf114271a8ff394c79c45673',
+        'b64::JC5hY2Nlc3NfdG9rZW4=::46b', 'never', 60 %}"
+      prefix: ""
+    metaSortKey: -1684923598285
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_59f965cb2b524e29a66e28eb956ac83f
+    parentId: wrk_c9c55eedf76d4ba59cee836694fc9dd5
+    modified: 1684923598278
+    created: 1684923598278
+    name: Payment Types
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1684923598278
+    _type: request_group
+  - _id: req_db9d04d3669a43358eeea941fef63bcc
+    parentId: fld_59f965cb2b524e29a66e28eb956ac83f
+    modified: 1684923984712
+    created: 1684923598282
+    url: "{{ _.base__url }}/payment-types"
+    name: payment-types
+    description: ""
+    method: GET
+    body:
+      mimeType: application/json
+      text: "{\r
+
+        \    \"name\": \"Vale Alimentação\",\r
+
+        \    \"acronym\": \"VA\",\r
+
+        \    \"enabled\": true\r
+
+        }"
+    parameters:
+      - name: enabled
+        value: "false"
+        disabled: true
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication:
+      type: bearer
+      disabled: false
+      token: "{% response 'body', 'req_20b6ee6edf114271a8ff394c79c45673',
+        'b64::JC5hY2Nlc3NfdG9rZW4=::46b', 'never', 60 %}"
+      prefix: ""
+    metaSortKey: -1684923598282
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_96479f4feb8f4b3db2b092d70b38589e
+    parentId: fld_59f965cb2b524e29a66e28eb956ac83f
+    modified: 1684923916574
+    created: 1684923598280
+    url: "{{ _.base__url }}/payment-types"
+    name: payment-types
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: "{\r
+
+        \    \"name\": \"Vale Alimentação\",\r
+
+        \    \"acronym\": \"VA\",\r
+
+        \    \"enabled\": true\r
+
+        }"
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication: {}
+    metaSortKey: -1684923598280
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_18a1d36e8e404f4199dd3c5ad2cfd73b
+    parentId: fld_d76e61d92126462ab8e7caf6f8c7cc05
+    modified: 1684923907939
+    created: 1684923585411
+    url: "{{ _.base__url }}/products/3"
+    name: Product Edit
+    description: ""
+    method: PUT
+    body:
+      mimeType: application/json
+      text: "{\r
+
+        \    \"name\": \"X-Churrasco\",\r
+
+        \    \"description\": \"Lanche acompanha pão francês, contra
+        filé, alface, vinagrete, queijo e maionese\",\r
+
+        \    \"price\": 23.0,\r
+
+        \    \"image\":
+        \"http://www.saboresajinomoto.com.br/uploads/images/recipes/sanduiche-d\
+        e-churrasco.jpg\"\r
+
+        }"
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication: {}
+    metaSortKey: -1684923585411
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_d76e61d92126462ab8e7caf6f8c7cc05
+    parentId: wrk_c9c55eedf76d4ba59cee836694fc9dd5
+    modified: 1684923585402
+    created: 1684923585402
+    name: Products
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1684923585402
+    _type: request_group
+  - _id: req_4e2dc2bb96814fb7aa58dd8f70c39946
+    parentId: fld_d76e61d92126462ab8e7caf6f8c7cc05
+    modified: 1684923896512
+    created: 1684923585407
+    url: "{{ _.base__url }}/products"
+    name: Product
+    description: ""
+    method: GET
+    body:
+      mimeType: application/json
+      text: "{\r
+
+        \    \"name\": \"Porção de 500g Calabresa acebolada\",\r
+
+        \    \"description\": \"\",\r
+
+        \    \"price\": 19.0,\r
+
+        \    \"image_path\":
+        \"https://www.anamariabrogui.com.br/assets/uploads/receitas/fotos/usuar\
+        io-1682-52acab79d88efd805e6a341697e6aecb.jpg\"\r
+
+        }"
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication: {}
+    metaSortKey: -1684923585407
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_86408a0ec6a643b7866c7fa7baa4129a
+    parentId: fld_d76e61d92126462ab8e7caf6f8c7cc05
+    modified: 1684923990354
+    created: 1684923585406
+    url: "{{ _.base__url }}/uploads"
+    name: Upload
+    description: ""
+    method: POST
+    body:
+      params:
+        - type: file
+          name: file
+          disabled: false
+          fileName: /C:/Users/rodri/Downloads/leia a legenda.png
+      mimeType: multipart/form-data
+    parameters: []
+    headers: []
+    authentication:
+      type: bearer
+      disabled: false
+      token: "{% response 'body', 'req_20b6ee6edf114271a8ff394c79c45673',
+        'b64::JC5hY2Nlc3NfdG9rZW4=::46b', 'never', 60 %}"
+      prefix: ""
+    metaSortKey: -1684923585406
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_5f886013b997462896c3342b3a33f19b
+    parentId: fld_d76e61d92126462ab8e7caf6f8c7cc05
+    modified: 1684923899966
+    created: 1684923585404
+    url: "{{ _.base__url }}/products"
+    name: Product
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: "{\r
+
+        \    \"name\": \"Porção de 500g Calabresa acebolada\",\r
+
+        \    \"description\": \"\",\r
+
+        \    \"price\": 19.0,\r
+
+        \    \"image\":
+        \"https://www.anamariabrogui.com.br/assets/uploads/receitas/fotos/usuar\
+        io-1682-52acab79d88efd805e6a341697e6aecb.jpg\"\r
+
+        }"
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication: {}
+    metaSortKey: -1684923585404
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_49510342fc1843eca075669cc8a58a29
+    parentId: fld_d8f6ea466e184a789e9533263d2845fd
+    modified: 1684923996208
+    created: 1684923571196
+    url: "{{ _.base__url }}/users/1"
+    name: ById
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication:
+      type: bearer
+      disabled: false
+      token: "{% response 'body', 'req_20b6ee6edf114271a8ff394c79c45673',
+        'b64::JC5hY2Nlc3NfdG9rZW4=::46b', 'never', 60 %}"
+      prefix: ""
+    metaSortKey: -1684923571196
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_d8f6ea466e184a789e9533263d2845fd
+    parentId: wrk_c9c55eedf76d4ba59cee836694fc9dd5
+    modified: 1684923571194
+    created: 1684923571194
+    name: User
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1684923571194
+    _type: request_group
+  - _id: env_8b4dc0e4ceac663d5bf17c4180756a9c0b9f5eba
+    parentId: wrk_c9c55eedf76d4ba59cee836694fc9dd5
+    modified: 1683804882018
+    created: 1683804882018
+    name: Base Environment
+    data: {}
+    dataPropertyOrder: null
+    color: null
+    isPrivate: false
+    metaSortKey: 1683804882018
+    _type: environment
+  - _id: jar_8b4dc0e4ceac663d5bf17c4180756a9c0b9f5eba
+    parentId: wrk_c9c55eedf76d4ba59cee836694fc9dd5
+    modified: 1683804882020
+    created: 1683804882020
+    name: Default Jar
+    cookies: []
+    _type: cookie_jar
+  - _id: spc_f63a97d9ebc44820b031097def8b26f2
+    parentId: wrk_c9c55eedf76d4ba59cee836694fc9dd5
+    modified: 1683804882014
+    created: 1683804882014
+    fileName: dart week 10
+    contents: ""
+    contentType: yaml
+    _type: api_spec
+  - _id: env_5fdaaade536e4ac1953cd24c45852614
+    parentId: env_8b4dc0e4ceac663d5bf17c4180756a9c0b9f5eba
+    modified: 1683804913831
+    created: 1683804890880
+    name: dev
+    data:
+      base__url: http://localhost:8080
+    dataPropertyOrder:
+      "&":
+        - base__url
+    color: "#37ff00"
+    isPrivate: false
+    metaSortKey: 1683804890880
+    _type: environment
