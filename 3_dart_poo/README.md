@@ -73,17 +73,21 @@
 É uma classe assim como qualquer outra, foi criado para suprir herança multipla.
 
 Segue algumas caracteristicas:
+
 1. para definir o mixin existe duas formas:
+
 - com o `on`: define qual o tipo da classe deve ser para utilizar o mixin ou seja onde pode ser usado.
 - sem o `on`: qualquer classe
 
 2. para declarar um mixin existe duas formas:
+
 - com abstract e não deve extender outras classes
 `abstract class Teste{}`
 - sem abstract
 `mixin Teste{}`
 
 3. não é possivel exterder um mixin
+
 4. Se existir algum metodo com a mesma assinatura, irá sobrescrever ela, quem estiver por ultimo, ex:
 `class Teste extends Artista with Dancar, Cantar`, a classe cantar ira sobrescrever metodos com a mesma assinatura.
 
