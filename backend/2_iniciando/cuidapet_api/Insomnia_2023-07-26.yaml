@@ -1,0 +1,1265 @@
+_type: export
+__export_format: 4
+__export_date: 2023-07-26T10:21:36.026Z
+__export_source: insomnia.desktop.app:v2023.4.0
+resources:
+  - _id: req_2429f76ecdd343f3924c7b932aa4109e
+    parentId: fld_91416ebd7c8645f580c5fd27a13e133d
+    modified: 1689766467917
+    created: 1689764613257
+    url: https://fcm.googleapis.com/fcm/send
+    name: legado send
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: >-
+        {
+        	"to": "BJisCa-lqx8FoiaCTI5Te3S3LzyFXsOKej1q9NkDMACgxLyxP9I2UAb4spFVLDBp6k5UUiQ7Mn8InX0zNGNUpxE",
+        	"notification": {
+        		"body": "teste",
+        		"title": "teste"
+        	},
+        	"priority": "high",
+        	"data": {
+        		"click_action": "FLUTTER_NOTIFICATION_CLICK",
+        		"id": "1",
+        		"status": "done",
+        		"payload": {
+        		}
+        	}
+        }
+    parameters: []
+    headers:
+      - id: pair_2d031636e43c44e6aae9f02ee5446729
+        name: Authorization
+        value: key=AAAA71zWqZA:APA91bHJOcJlwYqrsU0uv3tHpnj4dklKXqzI_PCKtAMXTsz7R1uF55U8G6ZJ84ZFb267ci0JyFJ2V8BnzTMtk58SzNatOhOchln-TwaBMmPF9AwqIz5jPFMgRNgMNg_mMZLghhG3C3VG
+        description: ""
+      - name: Content-Type
+        value: application/json
+    authentication: {}
+    metaSortKey: -1689764613257
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_91416ebd7c8645f580c5fd27a13e133d
+    parentId: wrk_f70c459b7dc248c3afbe6f1766da0d0c
+    modified: 1689762331281
+    created: 1689762331281
+    name: Chat
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1689762331281
+    _type: request_group
+  - _id: wrk_f70c459b7dc248c3afbe6f1766da0d0c
+    parentId: null
+    modified: 1688319870215
+    created: 1688319870215
+    name: cuidapet
+    description: ""
+    scope: collection
+    _type: workspace
+  - _id: req_52cefcb1a1b44e949ad5768f40aaf658
+    parentId: fld_91416ebd7c8645f580c5fd27a13e133d
+    modified: 1689766770123
+    created: 1689766473563
+    url: https://fcm.googleapis.com/v1/projects/1028054755728/messages:send
+    name: novo send
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: >-
+        {
+        	"message": {
+        		"topic": "BJisCa-lqx8FoiaCTI5Te3S3LzyFXsOKej1q9NkDMACgxLyxP9I2UAb4spFVLDBp6k5UUiQ7Mn8InX0zNGNUpxE",
+        		"notification": {
+        			"title": "Breaking News",
+        			"body": "New news story available."
+        		},
+        		"priority": "high",
+        		"data": {
+        			"click_action": "FLUTTER_NOTIFICATION_CLICK",
+        			"id": "1",
+        			"status": "done",
+        			"payload": {
+        			}
+        		}
+        	}
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_c1fbf6baffe94b11b28d359b6b98ec44
+    authentication:
+      type: bearer
+      token: Nf9NH9sUBqrpVT9JF94e-jAPl369LIM3xeA6Fv9T44A
+    metaSortKey: -1689763473452
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_d16d8e576e5e4349b3d2badac4e6d7bb
+    parentId: fld_91416ebd7c8645f580c5fd27a13e133d
+    modified: 1689849442357
+    created: 1689762333647
+    url: "{{ _.base_url }}/chats/schedule/{% request 'parameter', 'scheduleId', 0
+      %}/start-chat"
+    name: start chat
+    description: ""
+    method: POST
+    body: {}
+    parameters:
+      - id: pair_91c07a7c64c546579fec2c0ba21567f7
+        name: scheduleId
+        value: "7"
+        description: ""
+        disabled: true
+    headers:
+      - id: pair_9096fb1973a24a6aaa67dbe6aee1979d
+        name: Authorization
+        value: "{% response 'body', 'req_3748f2cee0ab4a40aefc6177cc930f65',
+          'b64::JC5hY2Nlc3NfdG9rZW4=::46b', 'never', 60 %}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1689762333647
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_a54863ecffd348e3a0e847fe8e0fa9d6
+    parentId: fld_91416ebd7c8645f580c5fd27a13e133d
+    modified: 1689851030221
+    created: 1689850865299
+    url: "{{ _.base_url }}/chats/{% request 'parameter', 'chatId', 0 %}/end-chat"
+    name: end chat
+    description: ""
+    method: PUT
+    body: {}
+    parameters:
+      - id: pair_91c07a7c64c546579fec2c0ba21567f7
+        name: chatId
+        value: "7"
+        description: ""
+        disabled: true
+    headers:
+      - id: pair_9096fb1973a24a6aaa67dbe6aee1979d
+        name: Authorization
+        value: "{% response 'body', 'req_3748f2cee0ab4a40aefc6177cc930f65',
+          'b64::JC5hY2Nlc3NfdG9rZW4=::46b', 'never', 60 %}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1689688423547.375
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_3119d01857ec4bb5a57fb7b7225065fe
+    parentId: fld_91416ebd7c8645f580c5fd27a13e133d
+    modified: 1689850349386
+    created: 1689850144319
+    url: "{{ _.base_url }}/chats/schedule/{% request 'parameter', 'scheduleId', 0
+      %}/start-chat"
+    name: start chat - supplier
+    description: ""
+    method: POST
+    body: {}
+    parameters:
+      - id: pair_91c07a7c64c546579fec2c0ba21567f7
+        name: scheduleId
+        value: "12"
+        description: ""
+        disabled: true
+    headers:
+      - id: pair_9096fb1973a24a6aaa67dbe6aee1979d
+        name: Authorization
+        value: "{% response 'body', 'req_76810215f4e64e7fbaeeac8b3f42b70a',
+          'b64::JC5hY2Nlc3NfdG9rZW4=::46b', 'never', 60 %}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1689614513447.75
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_a39cec63c68f42de8049938ee81b7c6a
+    parentId: fld_91416ebd7c8645f580c5fd27a13e133d
+    modified: 1689848090229
+    created: 1689847783263
+    url: "{{ _.base_url }}/chats/notify"
+    name: Notify user/supplier
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"chat_id": 1,
+        	"message": "deu problema aqui",
+        	"to": "U"
+        }
+    parameters:
+      - id: pair_91c07a7c64c546579fec2c0ba21567f7
+        name: scheduleId
+        value: "6"
+        description: ""
+        disabled: true
+    headers:
+      - id: pair_9096fb1973a24a6aaa67dbe6aee1979d
+        name: Authorization
+        value: "{% response 'body', 'req_3748f2cee0ab4a40aefc6177cc930f65',
+          'b64::JC5hY2Nlc3NfdG9rZW4=::46b', 'never', 60 %}"
+        description: ""
+      - name: Content-Type
+        value: application/json
+        id: pair_c2a12ebe05ab46c1bcfc8331afb8ccf6
+    authentication: {}
+    metaSortKey: -1689466693248.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_6e84d02919fb4aea993ae03c84eb8158
+    parentId: fld_91416ebd7c8645f580c5fd27a13e133d
+    modified: 1689849469701
+    created: 1689849154943
+    url: "{{ _.base_url }}/chats/user"
+    name: Find all By user
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_9096fb1973a24a6aaa67dbe6aee1979d
+        name: Authorization
+        value: "{% response 'body', 'req_3748f2cee0ab4a40aefc6177cc930f65',
+          'b64::JC5hY2Nlc3NfdG9rZW4=::46b', 'never', 60 %}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1689318873049.25
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_9a5b19346179472db09242929748e43b
+    parentId: fld_91416ebd7c8645f580c5fd27a13e133d
+    modified: 1689850106636
+    created: 1689850026665
+    url: "{{ _.base_url }}/chats/supplier"
+    name: Find all By supplier
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_9096fb1973a24a6aaa67dbe6aee1979d
+        name: Authorization
+        value: "{% response 'body', 'req_76810215f4e64e7fbaeeac8b3f42b70a',
+          'b64::JC5hY2Nlc3NfdG9rZW4=::46b', 'never', 60 %}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1689244962949.625
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_e77b06a49b7b499889060d459d0f9f08
+    parentId: fld_1e954eeb871b4af6bbaf425db9010ce9
+    modified: 1689849352910
+    created: 1689155831491
+    url: "{{ _.base_url }}/schedules"
+    name: Schedule services
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"schedule_data": "2023-31-07T10:00:00",
+        	"name": "Daniel Morita",
+        	"pet_name": "tobias",
+        	"supplier_id": 1,
+        	"services": [
+        		1,
+        		2,
+        		3
+        	]
+        }
+    parameters: []
+    headers:
+      - id: pair_4649fa58fd8841c6a29e87bd4bc01260
+        name: Authorization
+        value: "{% response 'body', 'req_3748f2cee0ab4a40aefc6177cc930f65',
+          'b64::JC5hY2Nlc3NfdG9rZW4=::46b', 'never', 60 %}"
+        description: ""
+      - name: Content-Type
+        value: application/json
+    authentication: {}
+    metaSortKey: -1689155831491
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_1e954eeb871b4af6bbaf425db9010ce9
+    parentId: wrk_f70c459b7dc248c3afbe6f1766da0d0c
+    modified: 1689155826310
+    created: 1689155826310
+    name: Schedules
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1689155826310
+    _type: request_group
+  - _id: req_39e4f33333674c938891216241e4ef0b
+    parentId: fld_1e954eeb871b4af6bbaf425db9010ce9
+    modified: 1689850325528
+    created: 1689850167736
+    url: "{{ _.base_url }}/schedules"
+    name: Schedule services - supplier
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"schedule_data": "2023-31-07T10:00:00",
+        	"name": "Daniel Morita",
+        	"pet_name": "tobias",
+        	"supplier_id": 25,
+        	"services": [
+        		1,
+        		2,
+        		3
+        	]
+        }
+    parameters: []
+    headers:
+      - id: pair_4649fa58fd8841c6a29e87bd4bc01260
+        name: Authorization
+        value: "{% response 'body', 'req_76810215f4e64e7fbaeeac8b3f42b70a',
+          'b64::JC5hY2Nlc3NfdG9rZW4=::46b', 'never', 60 %}"
+        description: ""
+      - name: Content-Type
+        value: application/json
+        id: pair_abec8345ab224c20ac45471dd4e3cbd3
+    authentication: {}
+    metaSortKey: -1689080668012
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_96776bbd6a7d4e739e958b94ffda7418
+    parentId: fld_1e954eeb871b4af6bbaf425db9010ce9
+    modified: 1689762484460
+    created: 1689158626410
+    url: "{{ _.base_url }}/schedules"
+    name: Find all by user
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_4649fa58fd8841c6a29e87bd4bc01260
+        name: Authorization
+        value: "{% response 'body', 'req_3748f2cee0ab4a40aefc6177cc930f65',
+          'b64::JC5hY2Nlc3NfdG9rZW4=::46b', 'never', 60 %}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1689005504533
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_b3ba1f39f57041148c1ad0a2606e4969
+    parentId: fld_1e954eeb871b4af6bbaf425db9010ce9
+    modified: 1689159657654
+    created: 1689159441321
+    url: "{{ _.base_url }}/schedules/supplier"
+    name: Find all by user Supplier
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_4649fa58fd8841c6a29e87bd4bc01260
+        name: Authorization
+        value: "{% response 'body', 'req_ec538050fe714c49a5a0430444e9eb2f',
+          'b64::JC5hY2Nlc3NfdG9rZW4=::46b', 'never', 60 %}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1688930341054
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_b6d2de6f727c431b9a0cafce0c9e986e
+    parentId: fld_1e954eeb871b4af6bbaf425db9010ce9
+    modified: 1689157101924
+    created: 1689156978308
+    url: "{{ _.base_url }}/schedules/{% request 'parameter', 'id', 0 %}/status/{%
+      request 'parameter', 'status', 0 %}"
+    name: Change status
+    description: ""
+    method: PUT
+    body: {}
+    parameters:
+      - id: pair_09926711f2904502b401a8806b7dc500
+        name: id
+        value: "4"
+        description: ""
+        disabled: true
+      - id: pair_31efd6ba3f684742bb9adfa06248fb49
+        name: status
+        value: C
+        description: ""
+        disabled: true
+    headers:
+      - id: pair_4649fa58fd8841c6a29e87bd4bc01260
+        name: Authorization
+        value: "{% response 'body', 'req_3748f2cee0ab4a40aefc6177cc930f65',
+          'b64::JC5hY2Nlc3NfdG9rZW4=::46b', 'never', 60 %}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1688855177575
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_eac4fb9ae88f4299ba1bceeb0c2b5e06
+    parentId: fld_2f9edc31406740daaa9a6e7b64974e09
+    modified: 1689072285554
+    created: 1688554523659
+    url: "{{ _.base_url }}/suppliers/25"
+    name: Index
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_f022a3d4dce040b6b7d3d2a7adee3212
+        name: Authorization
+        value: "{% response 'body', 'req_3748f2cee0ab4a40aefc6177cc930f65',
+          'b64::JC5hY2Nlc3NfdG9rZW4=::46b', 'never', 60 %}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1688554523659
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_2f9edc31406740daaa9a6e7b64974e09
+    parentId: wrk_f70c459b7dc248c3afbe6f1766da0d0c
+    modified: 1688552945571
+    created: 1688552945571
+    name: Suupliers
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1688552945572
+    _type: request_group
+  - _id: req_83c4467ae6f141acb9f0df524cab60d8
+    parentId: fld_2f9edc31406740daaa9a6e7b64974e09
+    modified: 1689156086457
+    created: 1688555731858
+    url: "{{ _.base_url }}/suppliers/20/services"
+    name: Find Service by Supplier
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_f022a3d4dce040b6b7d3d2a7adee3212
+        name: Authorization
+        value: "{% response 'body', 'req_3748f2cee0ab4a40aefc6177cc930f65',
+          'b64::JC5hY2Nlc3NfdG9rZW4=::46b', 'never', 60 %}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1688553735806.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_4ea013d615e3475a99d2ca7b770a8591
+    parentId: fld_2f9edc31406740daaa9a6e7b64974e09
+    modified: 1688553281003
+    created: 1688552947954
+    url: "{{ _.base_url }}/suppliers"
+    name: Search Near By Me
+    description: ""
+    method: GET
+    body: {}
+    parameters:
+      - id: pair_481a871a5be44a6c91869060960970b1
+        name: lat
+        value: "-23.56116762505895"
+        description: ""
+      - id: pair_db3990564f454c35803bf82fd6c67327
+        name: lng
+        value: "-46.65649430213009"
+        description: ""
+    headers:
+      - id: pair_cce41cec08ea4ed8880e95f106f123ab
+        name: Authorization
+        value: "{% response 'body', 'req_3748f2cee0ab4a40aefc6177cc930f65',
+          'b64::JC5hY2Nlc3NfdG9rZW4=::46b', 'never', 60 %}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1688552947954
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_ac518ac452e34eb7a0ca0e44af88f4f1
+    parentId: fld_2f9edc31406740daaa9a6e7b64974e09
+    modified: 1689071795900
+    created: 1689067998100
+    url: "{{ _.base_url }}/suppliers/user"
+    name: Check Email Exists
+    description: ""
+    method: GET
+    body: {}
+    parameters:
+      - id: pair_96a535ebf46b42fc9a473778052d0c78
+        name: email
+        value: danielmorit2a@hotmail.com
+        description: ""
+    headers: []
+    authentication: {}
+    metaSortKey: -1688551201326.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_de599d14072546baa2234906286e51a9
+    parentId: fld_2f9edc31406740daaa9a6e7b64974e09
+    modified: 1689071793403
+    created: 1689070041892
+    url: "{{ _.base_url }}/suppliers/user"
+    name: Create new supplier and user
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"supplier_name": "PUT SHOP ACADEMIA DO FLUTTER",
+        	"email": "petshop@academiadoflutter.com.br",
+        	"password": "123123",
+        	"category_id": 3
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_37f1d63a24264d18ae3dd638ae4f28b2
+    authentication: {}
+    metaSortKey: -1688550328012.75
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_17b8eee4db2e4e789549873d2d3310c1
+    parentId: fld_2f9edc31406740daaa9a6e7b64974e09
+    modified: 1689072223358
+    created: 1689071730209
+    url: "{{ _.base_url }}/suppliers"
+    name: Update supplier
+    description: ""
+    method: PUT
+    body:
+      mimeType: application/json
+      text: >-
+        {
+        	"name": "PUT SHOP ACADEMIA DO FLUTTER",
+        	"logo": "https://img.freepik.com/vetores-premium/logotipo-fofinho-da-petshop-com-gato-e-cachorro_454510-56.jpg?w=826",
+        	"address": "AV Paulist, 100 - SP",
+        	"phone": "999292292",
+        	"lat": -23.56116762505895,
+        	"lng": -46.65649430213009,
+        	"category_id": 3
+        }
+    parameters: []
+    headers:
+      - id: pair_cce41cec08ea4ed8880e95f106f123ab
+        name: Authorization
+        value: "{% response 'body', 'req_76810215f4e64e7fbaeeac8b3f42b70a',
+          'b64::JC5hY2Nlc3NfdG9rZW4=::46b', 'never', 60 %}"
+        description: ""
+        disabled: false
+      - name: Content-Type
+        value: application/json
+        id: pair_b2702cee027945f295a7d24226e5b818
+    authentication: {}
+    metaSortKey: -1688549891355.875
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_f6abc54053de441da7265dfd12c8fcba
+    parentId: fld_f31cc129d20048638b2ca8e2e3db51b9
+    modified: 1688552975046
+    created: 1688549454699
+    url: "{{ _.base_url }}/categories"
+    name: Show
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_b980d91aa6a142c3b842cec49e6261b7
+        name: Authorization
+        value: "{% response 'body', 'req_3748f2cee0ab4a40aefc6177cc930f65',
+          'b64::JC5hY2Nlc3NfdG9rZW4=::46b', 'never', 60 %}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1688549454699
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_f31cc129d20048638b2ca8e2e3db51b9
+    parentId: wrk_f70c459b7dc248c3afbe6f1766da0d0c
+    modified: 1688549451910
+    created: 1688549451910
+    name: Categories
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1688549451910
+    _type: request_group
+  - _id: req_7871a8d90ed943f4a2a3bc4229c125f2
+    parentId: fld_e44a6f45d11d4bf780c93793941e856b
+    modified: 1688382602182
+    created: 1688380706914
+    url: "{{ _.base_url }}/users"
+    name: index
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_c1d1b79ffd69459eaf689ee22c134998
+        name: Authorization
+        value: "{% response 'body', 'req_3748f2cee0ab4a40aefc6177cc930f65',
+          'b64::JC5hY2Nlc3NfdG9rZW4=::46b', 'never', 60 %}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1688380706914
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_e44a6f45d11d4bf780c93793941e856b
+    parentId: wrk_f70c459b7dc248c3afbe6f1766da0d0c
+    modified: 1688380702220
+    created: 1688380702220
+    name: Users
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1688380702220
+    _type: request_group
+  - _id: req_dab193a42cad418ab964380eaa45dd9e
+    parentId: fld_e44a6f45d11d4bf780c93793941e856b
+    modified: 1688385389771
+    created: 1688382608875
+    url: "{{ _.base_url }}/users/avatar5"
+    name: Update Avatar
+    description: ""
+    method: PUT
+    body:
+      mimeType: application/json
+      text: >-
+        {
+        	"url_avatar": "https://upload.wikimedia.org/wikipedia/pt/2/2c/Doraemon_capa_original.jpg?20141028150915"
+        }
+    parameters: []
+    headers:
+      - id: pair_c1d1b79ffd69459eaf689ee22c134998
+        name: Authorization
+        value: "{% response 'body', 'req_3748f2cee0ab4a40aefc6177cc930f65',
+          'b64::JC5hY2Nlc3NfdG9rZW4=::46b', 'never', 60 %}"
+        description: ""
+      - name: Content-Type
+        value: application/json
+    authentication: {}
+    metaSortKey: -1688350302975
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_98d965432ef34392b2fc106b91d42a9d
+    parentId: fld_e44a6f45d11d4bf780c93793941e856b
+    modified: 1688388433273
+    created: 1688388371825
+    url: "{{ _.base_url }}/users/device"
+    name: Update Device Token - iOS
+    description: ""
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"token": "IOS_TOKEN_UPDATE",
+        	"platform": "IOS"
+        }
+    parameters: []
+    headers:
+      - id: pair_c1d1b79ffd69459eaf689ee22c134998
+        name: Authorization
+        value: "{% response 'body', 'req_3748f2cee0ab4a40aefc6177cc930f65',
+          'b64::JC5hY2Nlc3NfdG9rZW4=::46b', 'never', 60 %}"
+        description: ""
+      - name: Content-Type
+        value: application/json
+    authentication: {}
+    metaSortKey: -1688335101005.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_c4c3d1b1651f462c8daf8dd8246c584c
+    parentId: fld_e44a6f45d11d4bf780c93793941e856b
+    modified: 1688388447222
+    created: 1688388439335
+    url: "{{ _.base_url }}/users/device"
+    name: Update Device Token - Android
+    description: ""
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"token": "ANDROID_TOKEN_UPDATE",
+        	"platform": "ANDROID"
+        }
+    parameters: []
+    headers:
+      - id: pair_c1d1b79ffd69459eaf689ee22c134998
+        name: Authorization
+        value: "{% response 'body', 'req_3748f2cee0ab4a40aefc6177cc930f65',
+          'b64::JC5hY2Nlc3NfdG9rZW4=::46b', 'never', 60 %}"
+        description: ""
+      - name: Content-Type
+        value: application/json
+    authentication: {}
+    metaSortKey: -1688327500020.75
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_d32b35a86a4149929e26afdfc6a6faef
+    parentId: fld_7f423d7e6c45462ab7c316912470f1cb
+    modified: 1689159900800
+    created: 1688319899036
+    url: "{{ _.base_url }}/auth/register"
+    name: Register
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        { 
+        	"email": "danielmorita_2@hotmail.com",
+        	"password": "123123"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication: {}
+    metaSortKey: -1688319899036
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_7f423d7e6c45462ab7c316912470f1cb
+    parentId: wrk_f70c459b7dc248c3afbe6f1766da0d0c
+    modified: 1688324428916
+    created: 1688319896695
+    name: Auth
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1688319896695
+    _type: request_group
+  - _id: req_3748f2cee0ab4a40aefc6177cc930f65
+    parentId: fld_7f423d7e6c45462ab7c316912470f1cb
+    modified: 1689852205622
+    created: 1688327143214
+    url: "{{ _.base_url }}/auth"
+    name: Login
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        { 
+        	"email": "danielmorita_2@hotmail.com",
+        	"password": "123123",
+        	"social_login": false,
+        	"supplier_user": false
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication: {}
+    metaSortKey: -1688227335184.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_ecaa0036d0304a8db628501fe50cd2eb
+    parentId: fld_7f423d7e6c45462ab7c316912470f1cb
+    modified: 1689851996253
+    created: 1688329257918
+    url: "{{ _.base_url }}/auth"
+    name: Login Social
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: >-
+        { 
+        	"email": "doraemon@hotmail.com",
+        	"social_login": true,
+        	"supplier_user": false,
+        	"avatar": "https://yt3.googleusercontent.com/ytc/AGIKgqMmfxvStzHp7xjqDdJBOKXpniaLYi6ED8lZA9ZFzA=s176-c-k-c0x00ffffff-no-rj",
+        	"social_type": "Google",
+        	"social_key": "123123123"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication: {}
+    metaSortKey: -1688215764703.0625
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_76810215f4e64e7fbaeeac8b3f42b70a
+    parentId: fld_7f423d7e6c45462ab7c316912470f1cb
+    modified: 1689071840631
+    created: 1689071784563
+    url: "{{ _.base_url }}/auth"
+    name: Login Supplier
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        { 
+        	"email": "petshop@academiadoflutter.com.br",
+        	"password": "123123",
+        	"social_login": false,
+        	"supplier_user": true
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication: {}
+    metaSortKey: -1688204194221.625
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_24edd06011694d84b15c480682c31540
+    parentId: fld_7f423d7e6c45462ab7c316912470f1cb
+    modified: 1689852316044
+    created: 1689071875188
+    url: "{{ _.base_url }}/auth/confirm"
+    name: Confirm Login Supplier
+    description: ""
+    method: PATCH
+    body:
+      mimeType: application/json
+      text: |-
+        { 
+        	"ios_token": "IOS_TOKEN_AOWIDJLWAIDN:LANW"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_2e35663a67c04f528e6d86225cf1d812
+      - id: pair_d093c6c03b454f2987e0d02025174fae
+        name: Authorization
+        value: "{% response 'body', 'req_76810215f4e64e7fbaeeac8b3f42b70a',
+          'b64::JC5hY2Nlc3NfdG9rZW4=::46b', 'never', 60 %}"
+        description: ""
+        disabled: false
+    authentication:
+      type: bearer
+      token: "{% response 'body', 'req_3748f2cee0ab4a40aefc6177cc930f65',
+        'b64::JC5hY2Nlc3NfdG9rZW4=::46b', 'never', 60 %}"
+      disabled: true
+    metaSortKey: -1688198408980.9062
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_ec538050fe714c49a5a0430444e9eb2f
+    parentId: fld_7f423d7e6c45462ab7c316912470f1cb
+    modified: 1689159389598
+    created: 1689159371266
+    url: "{{ _.base_url }}/auth"
+    name: Login Supplier 2
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        { 
+        	"email": "veterinariasalvação@gmail.com",
+        	"password": "123123",
+        	"social_login": false,
+        	"supplier_user": true
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication: {}
+    metaSortKey: -1688192623740.1875
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_828afdea4b3e43658a4e2e92217ece9f
+    parentId: fld_7f423d7e6c45462ab7c316912470f1cb
+    modified: 1689159421320
+    created: 1689159405008
+    url: "{{ _.base_url }}/auth/confirm"
+    name: Confirm Login Supplier 2
+    description: ""
+    method: PATCH
+    body:
+      mimeType: application/json
+      text: |-
+        { 
+        	"ios_token": "IOS_TOKEN_AOWIDJLWAIDN:LANW"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_2e35663a67c04f528e6d86225cf1d812
+      - id: pair_d093c6c03b454f2987e0d02025174fae
+        name: Authorization
+        value: "{% response 'body', 'req_ec538050fe714c49a5a0430444e9eb2f',
+          'b64::JC5hY2Nlc3NfdG9rZW4=::46b', 'never', 60 %}"
+        description: ""
+        disabled: false
+    authentication:
+      type: bearer
+      token: "{% response 'body', 'req_3748f2cee0ab4a40aefc6177cc930f65',
+        'b64::JC5hY2Nlc3NfdG9rZW4=::46b', 'never', 60 %}"
+      disabled: true
+    metaSortKey: -1688186838499.4688
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_2f5162edc59741108a82407b851a0270
+    parentId: fld_7f423d7e6c45462ab7c316912470f1cb
+    modified: 1688379836672
+    created: 1688332070281
+    url: "{{ _.base_url }}/auth/confirm"
+    name: Confirm Login - iOS
+    description: ""
+    method: PATCH
+    body:
+      mimeType: application/json
+      text: |-
+        { 
+        	"ios_token": "IOS_TOKEN_AOWIDJLWAIDN:LANW"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_2e35663a67c04f528e6d86225cf1d812
+      - id: pair_d093c6c03b454f2987e0d02025174fae
+        name: Authorization
+        value: "{% response 'body', 'req_3748f2cee0ab4a40aefc6177cc930f65',
+          'b64::JC5hY2Nlc3NfdG9rZW4=::46b', 'never', 60 %}"
+        description: ""
+        disabled: false
+    authentication:
+      type: bearer
+      token: "{% response 'body', 'req_3748f2cee0ab4a40aefc6177cc930f65',
+        'b64::JC5hY2Nlc3NfdG9rZW4=::46b', 'never', 60 %}"
+      disabled: true
+    metaSortKey: -1688157912295.875
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_ff7a7d4b5f4b47a88ebdb843cfa4ddc7
+    parentId: fld_7f423d7e6c45462ab7c316912470f1cb
+    modified: 1688332639904
+    created: 1688332133213
+    url: "{{ _.base_url }}/auth/confirm"
+    name: Confirm Login - Android
+    description: ""
+    method: PATCH
+    body:
+      mimeType: application/json
+      text: |-
+        { 
+        	"android_token": "ANDROID_TOKEN_AWIUDHWKAND"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_070df63733614694bd317f0bbf7afba1
+      - id: pair_ba9a7a7bdb314b599594e6b013bb2397
+        name: Authorization
+        value: "{% response 'body', 'req_3748f2cee0ab4a40aefc6177cc930f65',
+          'b64::JC5hY2Nlc3NfdG9rZW4=::46b', 'never', 60 %}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1688146341814.4375
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_75b086ac5f63491fa28c9f845c89850a
+    parentId: fld_7f423d7e6c45462ab7c316912470f1cb
+    modified: 1688379793189
+    created: 1688378662758
+    url: "{{ _.base_url }}/auth/refresh"
+    name: Refresh token - iOS
+    description: ""
+    method: PUT
+    body:
+      mimeType: application/json
+      text: >-
+        { 
+        	"refresh_token": "{% response 'body', 'req_2f5162edc59741108a82407b851a0270', 'b64::JC5yZWZyZXNoX3Rva2Vu::46b', 'never', 60 %}"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_e8b61bcce9294b47b459716f96ef96fa
+      - id: pair_88172f6724af42928990d25a1b561b2c
+        name: Authorization
+        value: "{% response 'body', 'req_2f5162edc59741108a82407b851a0270',
+          'b64::JC5hY2Nlc3NfdG9rZW4=::46b', 'never', 60 %}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1688146341764.4375
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_c754edd942164d55a1acfa9e274c0100
+    parentId: fld_7f423d7e6c45462ab7c316912470f1cb
+    modified: 1688379809230
+    created: 1688379798295
+    url: "{{ _.base_url }}/auth/refresh"
+    name: Refresh token - Android
+    description: ""
+    method: PUT
+    body:
+      mimeType: application/json
+      text: >-
+        { 
+        	"refresh_token": "{% response 'body', 'req_ff7a7d4b5f4b47a88ebdb843cfa4ddc7', 'b64::JC5yZWZyZXNoX3Rva2Vu::46b', 'never', 60 %}"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_e8b61bcce9294b47b459716f96ef96fa
+      - id: pair_88172f6724af42928990d25a1b561b2c
+        name: Authorization
+        value: "{% response 'body', 'req_ff7a7d4b5f4b47a88ebdb843cfa4ddc7',
+          'b64::JC5hY2Nlc3NfdG9rZW4=::46b', 'never', 60 %}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1688140556548.7188
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: env_5ba34ac0cc9f1cabd57a13ce42c9bd98e023b6e7
+    parentId: wrk_f70c459b7dc248c3afbe6f1766da0d0c
+    modified: 1688319870218
+    created: 1688319870218
+    name: Base Environment
+    data: {}
+    dataPropertyOrder: null
+    color: null
+    isPrivate: false
+    metaSortKey: 1688319870218
+    _type: environment
+  - _id: jar_5ba34ac0cc9f1cabd57a13ce42c9bd98e023b6e7
+    parentId: wrk_f70c459b7dc248c3afbe6f1766da0d0c
+    modified: 1688319870223
+    created: 1688319870223
+    name: Default Jar
+    cookies: []
+    _type: cookie_jar
+  - _id: env_cdc8bcc3498a43afa036dd082d6f69e1
+    parentId: env_5ba34ac0cc9f1cabd57a13ce42c9bd98e023b6e7
+    modified: 1688319941018
+    created: 1688319912487
+    name: dev
+    data:
+      base_url: http://localhost:8080
+    dataPropertyOrder:
+      "&":
+        - base_url
+    color: "#1eff00"
+    isPrivate: false
+    metaSortKey: 1688319912487
+    _type: environment

@@ -1,0 +1,43 @@
+version: '3.1'
+
+services:
+  server:
+    container_name: server
+    build:
+      context: .
+      dockerfile: ./Dockerfile-development
+    ports:
+      - 8081:4466
+    depends_on:
+      - db
+    networks:
+      - backend_server
+    
+  db:
+    container_name: server-db
+    image: postgres
+    restart: always
+    expose:
+      - 65432
+    ports:
+      - 65432:5432
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgrespw
+    volumes:
+      - ./pg_data:/var/lib/postgresql/data
+      - ./pg_data:/var/lib/postgres
+    networks:
+      - backend_server
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
+    networks:
+      - backend_server
+
+networks:
+  backend_server:
+    name: backend_server
